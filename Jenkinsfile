@@ -17,11 +17,11 @@ pipeline {
             }
         }
 
-	//	stage('Code Review') {
-          //  steps {
-               // npm run sonar 
-           // }
-       // }
+	stage('Code Review') {
+          steps {
+               bat  'npm run sonar' 
+           }
+        }
        
     }
 }
