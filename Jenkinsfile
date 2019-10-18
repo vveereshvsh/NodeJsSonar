@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-        nodejs 'NodeJs12'
+        nodejs "NodeJs12"
     }
 	
 	
@@ -18,7 +18,7 @@ pipeline {
         }
 		stage('Code Review') {
             steps {
-                npm run sonar 
+               // npm run sonar 
             }
         }
        
