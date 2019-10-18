@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/vveereshvsh/Jenkins_Sonar.git'
+                checkout scm
             }
         }
         stage('Build') {
@@ -16,11 +16,12 @@ pipeline {
                 npm install 
             }
         }
-		stage('Code Review') {
-            steps {
+
+	//	stage('Code Review') {
+          //  steps {
                // npm run sonar 
-            }
-        }
+           // }
+       // }
        
     }
 }
