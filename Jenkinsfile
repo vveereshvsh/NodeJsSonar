@@ -1,27 +1,27 @@
 pipeline {
     agent any
 	tools {
-        nodejs "NodeJs12"
+        nodejs "node"
     }
 	
 	
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git 'https://github.com/vveereshvsh/NodeJsSonar.git'
             }
         }
         stage('Build') {
             steps {
-                npm install 
+                bat 'npm install'
             }
         }
 
-	//	stage('Code Review') {
-          //  steps {
-               // npm run sonar 
-           // }
-       // }
+	stage('Code Review') {
+          steps {
+               bat  'npm run sonar' 
+           }
+        }
        
     }
 }
