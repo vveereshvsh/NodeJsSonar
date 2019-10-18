@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-        nodejs "NodeJs12"
+        nodejs "node"
     }
 	
 	
