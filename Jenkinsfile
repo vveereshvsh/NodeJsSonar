@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat label: '', script: 'npm install'
+                bat script: 'npm install'
             }
         }
 
